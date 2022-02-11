@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">AppLaunchTask</string>
+    <string name="welcome_screen">Welcome Screen</string>
+    <string name="user_name">User Name</string>
+    <string name="enter_your_user_name">Enter your user name</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter password</string>
+    <string name="login">Login</string>
+    <string name="user_name_empty">User name should not be empty</string>
+    <string name="valid_user_name">Enter valid user name</string>
+    <string name="password_not_empty">password should not be empty</string>
+    <string name="invalid_credential">invalid credential</string>
+    <string name="user_form">User Form</string>
+    <string name="first_name">First Name</string>
+    <string name="enter_first_name">Enter first name</string>
+    <string name="last_name">Last Name</string>
+    <string name="enter_last_name">enter last Name</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Enter email</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="first_name_not_empty">First name should not be empty</string>
+    <string name="last_name_not_empty">Last name should not be empty</string>
+    <string name="email_not_empty">Email should not be empty</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="timezone">Timezone</string>
+    <string name="temperature">Temperature</string>
+</resources>
