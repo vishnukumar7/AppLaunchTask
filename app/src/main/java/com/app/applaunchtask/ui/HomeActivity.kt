@@ -53,7 +53,7 @@ private val TAG="HomeActivity"
                 binding.add.visibility=View.VISIBLE
             }
 
-            is UserFormFragment -> {
+           else -> {
                 binding.add.visibility=View.GONE
             }
         }

@@ -12,4 +12,10 @@ object RetrofitHelper {
         return Retrofit.Builder().baseUrl(baseUrl).addConverterFactory(GsonConverterFactory.create())
             .build()
     }
+    
+    fun getInstances(): ApiInterface{
+        return Retrofit.Builder().baseUrl(baseUrl).addConverterFactory(GsonConverterFactory.create())
+            .build().create(ApiInterface::class.java)
+    }
+    
 }

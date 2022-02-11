@@ -11,5 +11,5 @@ class MyApplication : Application() {
 
     private val database by lazy { DatabaseClient.getInstance(this) }
 
-    val appRepository by lazy { AppRepository(database.userDoa()) }
+    val appRepository by lazy { AppRepository(database.userDoa(),RetrofitHelper.getInstances()) }
 }

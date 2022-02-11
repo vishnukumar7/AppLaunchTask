@@ -26,4 +26,7 @@
     <string name="longitude">Longitude</string>
     <string name="timezone">Timezone</string>
     <string name="temperature">Temperature</string>
+    <string name="weather_type">Weather Type</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind_speed">Wind speed</string>
 </resources>

@@ -4,8 +4,9 @@ import androidx.annotation.WorkerThread
 import com.app.applaunchtask.model.User
 import com.app.applaunchtask.model.UserDao
 import kotlinx.coroutines.flow.Flow
+import retrofit2.Retrofit
 
-class AppRepository(private val userDao: UserDao) {
+class AppRepository(private val userDao: UserDao,private var apiInterface: ApiInterface) {
 
     val userList: Flow<MutableList<User>> =userDao.getAll()
 
@@ -20,4 +21,6 @@ class AppRepository(private val userDao: UserDao) {
     suspend fun delete(user: User){
         userDao.delete(user)
     }
+
+    suspend fun getCurrentWeather() = apiInterface.getWeather()
 }
