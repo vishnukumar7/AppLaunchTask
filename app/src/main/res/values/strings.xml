@@ -10,7 +10,7 @@
     <string name="valid_user_name">Enter valid user name</string>
     <string name="valid_email">Enter email id</string>
     <string name="password_not_empty">password should not be empty</string>
-    <string name="invalid_credential">invalid credential</string>
+    <string name="invalid_credential">incorrect username or password</string>
     <string name="user_form">User Form</string>
     <string name="first_name">First Name</string>
     <string name="enter_first_name">Enter first name</string>

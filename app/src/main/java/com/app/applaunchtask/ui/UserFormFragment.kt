@@ -74,7 +74,6 @@ class UserFormFragment : Fragment() {
         }
 
         binding.cancel.setOnClickListener {
-            //requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
             (requireActivity() as HomeActivity).onBackPressed()
         }
     }
