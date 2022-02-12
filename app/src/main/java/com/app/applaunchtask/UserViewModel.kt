@@ -22,6 +22,10 @@ val weatherResponse: MutableLiveData<WeatherResponse> = MutableLiveData()
         appRepository.delete(user)
     }
 
+    fun deleteAll()= viewModelScope.launch {
+        appRepository.deleteAll()
+    }
+
     fun getWeatherData(){
         CoroutineScope(Dispatchers.IO).launch {
             val response=appRepository.getCurrentWeather()

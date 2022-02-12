@@ -8,6 +8,7 @@
     <string name="login">Login</string>
     <string name="user_name_empty">User name should not be empty</string>
     <string name="valid_user_name">Enter valid user name</string>
+    <string name="valid_email">Enter email id</string>
     <string name="password_not_empty">password should not be empty</string>
     <string name="invalid_credential">invalid credential</string>
     <string name="user_form">User Form</string>
@@ -29,4 +30,5 @@
     <string name="weather_type">Weather Type</string>
     <string name="humidity">Humidity</string>
     <string name="wind_speed">Wind speed</string>
+    <string name="no_user_found">No User Found</string>
 </resources>

@@ -22,5 +22,11 @@ class AppRepository(private val userDao: UserDao,private var apiInterface: ApiIn
         userDao.delete(user)
     }
 
+    @Suppress("RedundantSuspendModifier")
+    @WorkerThread
+    suspend fun deleteAll(){
+        userDao.deleteAll()
+    }
+
     suspend fun getCurrentWeather() = apiInterface.getWeather()
 }

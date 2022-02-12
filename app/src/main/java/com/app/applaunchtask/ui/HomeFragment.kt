@@ -39,16 +39,21 @@ class HomeFragment : Fragment() {
         binding.recyclcerView.setHasFixedSize(false)
         adapter = UserListAdapter(requireActivity(),userList)
         binding.recyclcerView.adapter = adapter
+        binding.add.setOnClickListener { (requireActivity() as HomeActivity).switch(UserFormFragment())  }
         (requireActivity() as HomeActivity).userViewModel.userList.observe(viewLifecycleOwner) { list ->
             list?.let {
                 userList.clear()
                 userList.addAll(it)
+                if(userList.size==0)
+                    binding.nullLay.visibility=View.VISIBLE
+                else binding.nullLay.visibility=View.GONE
                 Log.d(TAG, "onViewCreated: " + userList.size)
                 adapter.notifyDataSetChanged()
             }
         }
         val itemTouchHelper=ItemTouchHelper(simpleItemTouchCallback)
         itemTouchHelper.attachToRecyclerView(binding.recyclcerView)
+
 
     }
 
@@ -101,7 +106,6 @@ class HomeFragment : Fragment() {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val position = viewHolder.layoutPosition
                 (requireActivity() as HomeActivity).userViewModel.delete(userList.removeAt(position))
-                adapter.notifyDataSetChanged()
             }
 
         }

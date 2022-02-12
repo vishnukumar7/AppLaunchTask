@@ -17,6 +17,9 @@ class UserFormFragment : Fragment() {
 
     lateinit var binding: FragmentUserFormBinding
     lateinit var userDao: UserDao
+
+    var emailPattern = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,7 +32,6 @@ class UserFormFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         userDao = DatabaseClient.getInstance(requireContext()).userDoa()
-        (requireActivity() as HomeActivity).binding.add.visibility=View.VISIBLE
         binding.save.setOnClickListener {
             val firstName = binding.firstName.text.toString()
             val lastName = binding.lastName.text.toString()
@@ -57,6 +59,10 @@ class UserFormFragment : Fragment() {
                         getString(R.string.email_not_empty),
                         Toast.LENGTH_SHORT
                     ).show()
+                }
+
+                !email.matches(emailPattern.toRegex()) -> {
+                    Toast.makeText(activity, getString(R.string.valid_email), Toast.LENGTH_SHORT).show()
                 }
 
                 else -> {
